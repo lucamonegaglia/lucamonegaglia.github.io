@@ -12848,4 +12848,10 @@ span.next-arrow svg {
   display: table;
 }
 
+@media only screen and (max-width: 767px) {
+  /* Change background for first slide/section */
+  .slide:first-child .background {
+    background-image: url(../assets/img/background/mobile-avatar.png) !important;
+  }
+}
 /*# sourceMappingURL=slides.css.map */
