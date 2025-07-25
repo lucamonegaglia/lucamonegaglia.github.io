@@ -119,6 +119,16 @@
     overflow: visible;
 }
 
+/* Override equalElement behavior for project cards */
+.project-card .name-74.equalElement {
+    height: auto !important;
+    min-height: 80px !important;
+}
+
+.project-card .name-74.table {
+    display: flex !important;
+}
+
 .project-card .name-74 .cell {
     display: flex;
     flex-direction: column;
@@ -207,4 +217,14 @@
     overflow: visible !important;
     justify-content: flex-start !important;
     border-radius: 0 0 6px 6px !important;
+}
+
+/* Override equalElement behavior for expanded cards */
+.project-card.expanded .name-74.equalElement {
+    height: auto !important;
+    min-height: auto !important;
+}
+
+.project-card.expanded .name-74.table {
+    display: flex !important;
 }
