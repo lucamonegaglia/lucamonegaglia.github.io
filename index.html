@@ -25,37 +25,6 @@
 
 	<!-- Fonts and Material Icons -->
 	<link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,600,700|Material+Icons"/>
- 
-    <!-- Custom Styles for Equal Thumbnails -->
-    <style>
-        .thumbnail-74 {
-            position: relative;
-            overflow: hidden;
-            padding-top: 100%; /* Creates a 4:3 aspect ratio */
-            width: 100%;
-        }
-        
-        .thumbnail-74 img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 75%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Custom background images for responsive design */
-        .desktop-background {
-          background-image: url(assets/img/background/avatar.png);
-        }
-
-        /* Media query for mobile devices */
-        @media (max-width: 767px) {
-          .desktop-background {
-            background-image: url(assets/img/background/mobile-avatar.png);
-          }
-        }
-    </style>
 </head>
 <body class="slides chain simplifiedMobile animated">
 		
@@ -300,58 +269,137 @@
           <p class="ae-2"><span class="opacity-8">Powered by caffeine, curiosity, and a dash of ETH</span></p>
         </div>
         <div class="fix-12-12">  
-          <ul class="grid grid-74 later equal margin-top-5">
+          <ul class="grid grid-74 later equal margin-top-5 centered-projects">
             <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-3 fromCenter">
-              <a href="https://drive.google.com/file/d/1j7d9aVzHL6UdAijGx4GG4_R30kS9I2eX/view?usp=drive_link" class="box-74">
+              <div class="project-card" data-link="https://drive.google.com/file/d/1j7d9aVzHL6UdAijGx4GG4_R30kS9I2eX/view?usp=drive_link">
+                <div class="thumbnail-74">
+                  <img src="assets/img/adam.png" class="wide" alt="Thumbnail"/>
+                </div>
+                <div class="name-74 equalElement table wide">
+                  <div class="cell left top">
+                    <h3 class="project-title">Humanoid pipeline development</h3>
+                    <p class="project-description tiny opacity-6 cropBottom">Developed a modular ROS 2 pipeline for deploying Reinforcement Learning (RL) policies on the PNDbotics humanoid robot (Adam) to achieve robust standing and walking behaviors. The system integrates a MuJoCo-based simulation environment, real robot interfaces, and a shared RL control package, enabling seamless testing and deployment of learned policies.
+                      I trained Adversarial Motion Priors (AMP) RL policies using human motion data and applied domain randomization to mitigate the sim-to-real gap. I also implemented a buffer-based estimator-free approach to reduce reliance on explicit state estimation. The pipeline supports both simulation and real-world testing, with a custom GUI and joystick interface for intuitive control.</p>
+                    <div class="project-link-btn">
+                      <span>View Project →</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-3 fromCenter">
+              <div class="project-card" data-link="https://drive.google.com/file/d/1j7d9aVzHL6UdAijGx4GG4_R30kS9I2eX/view?usp=drive_link">
                 <div class="thumbnail-74">
                   <img src="assets/img/roboticHand.png" class="wide" alt="Thumbnail"/>
                 </div>
                 <div class="name-74 equalElement table wide">
                   <div class="cell left top">
-                    <h3 class="">Autonomous Robotic Hand</h3>
-                    <p class="tiny opacity-6 cropBottom">Designed and built a biomimetic robotic hand with real-time haptic feedback and used it for teleoperation and imitation learning experiments.</p>
+                    <h3 class="project-title">Autonomous Robotic Hand</h3>
+                    <p class="project-description tiny opacity-6 cropBottom">Designed and built a tendon-actuated robotic hand with 17 degrees of freedom, integrating MEMS-based tactile sensors and a real-time haptic feedback system to enhance teleoperation and autonomous manipulation. Using a Rokoko motion capture glove and ROS 2, I implemented imitation learning techniques for dexterous object handling. The hand was fully 3D-printed, equipped with ESP32-based feedback, and optimized for real-time sensor communication. This system successfully performed simple grasping and in-hand manipulation tasks, demonstrating its potential for applications in human-robot interaction, healthcare, and hazardous environments.</p>
+                    <div class="project-link-btn">
+                      <span>View Project →</span>
+                    </div>
                   </div>
                 </div>
-              </a>
+              </div>
+            </li>
+            <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-3 fromCenter">
+              <div class="project-card" data-link="https://github.com/MatteoZucchelli-eth/rrr">
+                <div class="thumbnail-74">
+                  <img src="assets/img/rrr.png" class="wide" alt="Thumbnail"/>
+                </div>
+                <div class="name-74 equalElement table wide">
+                  <div class="cell left top">
+                    <h3 class="project-title">3-DOF Planar Robotic Arm Control</h3>
+                    <p class="project-description tiny opacity-6 cropBottom">Developed a ROS 2-based control pipeline for a simulated 3-DOF planar robotic arm to track a moving target in real-time. The project involved implementing inverse kinematics using the Jacobian pseudo-inverse and a PD controller for precise end-effector tracking.
+
+I extended the solution to handle aliasing effects from low-frequency target updates, and designed a constrained controller using Sequential Quadratic Programming (SQP) to enforce joint limits and obstacle avoidance. The entire system was modeled in URDF, simulated with RViz, and structured into modular ROS 2 nodes for master control, simulation, state estimation, and velocity command generation.</p>
+                    <div class="project-link-btn">
+                      <span>View Project →</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-3 fromCenter">
+              <div class="project-card" data-link="https://drive.google.com/file/d/1Bm17jv7ypeHfq6Sz10zRDA5iNrYhx0AW/view?usp=sharing">
+                <div class="thumbnail-74">
+                  <img src="assets/img/cococity.png" class="wide" alt="Thumbnail"/>
+                </div>
+                <div class="name-74 equalElement table wide">
+                  <div class="cell left top">
+                    <h3 class="project-title">COCO-City traffic controller</h3>
+                    <p class="project-description tiny opacity-6 cropBottom">Developed and compared advanced traffic control strategies to tackle severe congestion in a simulated smart city (COCO-City). Starting from a baseline with no controller, I evaluated the performance of P, MPC, DeePC, and Q-Learning controllers, focusing on reducing CO₂ emissions, travel times, and preventing gridlock.</p>
+                    <div class="project-link-btn">
+                      <span>View Project →</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-3 fromCenter">
+              <div class="project-card" data-link="">
+                <div class="thumbnail-74">
+                  <img src="assets/img/3d_reconstruction_2.png" class="wide" alt="Thumbnail"/>
+                </div>
+                <div class="name-74 equalElement table wide">
+                  <div class="cell left top">
+                    <h3 class="project-title">Implicit Representation for Human Reconstruction</h3>
+                    <p class="project-description tiny opacity-6 cropBottom">Implemented a NeRF-inspired 3D reconstruction pipeline to digitally reconstruct human bodies from multi-view RGB images. Using implicit neural representations and differentiable neural rendering, we trained a network to generate high-quality 3D meshes and render novel views.</p>
+                    <div class="project-link-btn">
+                      <span>View Project →</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
             <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-4 fromCenter">
-              <a href="https://drive.google.com/file/d/1GkXCBDOT4XXSeUfT7exkS-GjMwH4Rj_1/view?usp=sharing" class="box-74">
+              <div class="project-card" data-link="https://drive.google.com/file/d/1GkXCBDOT4XXSeUfT7exkS-GjMwH4Rj_1/view?usp=sharing">
                 <div class="thumbnail-74">
                   <img src="assets/img/monopattinoOffroad.png" class="wide" alt="Thumbnail"/>
                 </div>
                 <div class="name-74 equalElement table wide">
                   <div class="cell left top">
-                    <h3 class="">Electric Off-Road Scooter Development</h3>
-                    <p class="tiny opacity-6 cropBottom">I modeled an off-road electric scooter in CAD, validating its performance through dynamic simulations in MATLAB and performed FEM simulations in Catia.</p>
+                    <h3 class="project-title">Electric Off-Road Scooter Development</h3>
+                    <p class="project-description tiny opacity-6 cropBottom">Modeled an off-road electric scooter in CAD, validating its performance through dynamic simulations in MATLAB and performed FEM simulations in Catia.</p>
+                    <div class="project-link-btn">
+                      <span>View Project →</span>
+                    </div>
                   </div>
                 </div>
-              </a>
+              </div>
             </li>
             <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-5 fromCenter">
-              <a href="https://matteozucchelli.pythonanywhere.com/" class="box-74">
+              <div class="project-card" data-link="https://matteozucchelli.pythonanywhere.com/">
                 <div class="thumbnail-74">
                   <img src="assets/img/learnLogo.png" class="wide" alt="Thumbnail"/>
                 </div>
                 <div class="name-74 equalElement table wide">
                   <div class="cell left top">
-                    <h3 class="">Learn</h3>
-                    <p class="tiny opacity-6 cropBottom">I created a full-stack web app to efficiently learn German vocabulary through adaptive flashcard practice, using Flask, MongoDB, and a custom HTML/CSS/JS frontend.</p>
+                    <h3 class="project-title">Learn</h3>
+                    <p class="project-description tiny opacity-6 cropBottom">Created a full-stack web app to efficiently learn German vocabulary through adaptive flashcard practice, using Flask, MongoDB, and a custom HTML/CSS/JS frontend.</p>
+                    <div class="project-link-btn">
+                      <span>View Project →</span>
+                    </div>
                   </div>
                 </div>
-              </a>
+              </div>
             </li>
             <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-5 fromCenter">
-              <a href="https://github.com/MatteoZucchelli-eth/student-group-pdm4ar-2024hs-ex11-the-poliplanners-1-e6a60867b235d84d22553a83d7c6377b8749df25" class="box-74">
+              <div class="project-card" data-link="https://github.com/MatteoZucchelli-eth/student-group-pdm4ar-2024hs-ex11-the-poliplanners-1-e6a60867b235d84d22553a83d7c6377b8749df25">
                 <div class="thumbnail-74">
                   <img src="assets/img/motion_planning.png" class="wide" alt="Thumbnail"/>
                 </div>
                 <div class="name-74 equalElement table wide">
                   <div class="cell left top">
-                    <h3 class="">Motion Planning and Control</h3>
-                    <p class="tiny opacity-6 cropBottom">I developed planning and control stacks for autonomous agents in two challenging simulations: docking a spaceship in dynamic space environments using sequential convex optimization, and performing safe, efficient lane changes in dense highway traffic with partial observability.</p>
+                    <h3 class="project-title">Motion Planning and Control</h3>
+                    <p class="project-description tiny opacity-6 cropBottom">Developed planning and control stacks for autonomous agents in two challenging simulations: docking a spaceship in dynamic space environments using sequential convex optimization, and performing safe, efficient lane changes in dense highway traffic with partial observability.</p>
+                    <div class="project-link-btn">
+                      <span>View Project →</span>
+                    </div>
                   </div>
                 </div>
-              </a>
+              </div>
             </li>
           </ul>
         </div>
